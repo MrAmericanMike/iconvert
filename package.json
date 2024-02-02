@@ -1,0 +1,39 @@
+{
+	"name": "iconvert",
+	"version": "0.0.1",
+	"description": "IConvert - Units conversion library",
+	"author": "MrAmericanMike",
+	"main": "lib/main.js",
+	"types": "lib/main.d.ts",
+	"scripts": {
+		"tsc": "tsc",
+		"test": "vitest",
+		"coverage": "vitest run --coverage"
+	},
+	"keywords": [
+		"iconvert",
+		"conversion",
+		"units",
+		"convert",
+		"math",
+		"temperature",
+		"distance",
+		"volume"
+	],
+	"license": "MIT",
+	"homepage": "https://github.com/MrAmericanMike/iconvert#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MrAmericanMike/iconvert.git"
+	},
+	"bugs": {
+		"url": "https://github.com/MrAmericanMike/iconvert/issues"
+	},
+	"devDependencies": {
+		"@types/node": "^20.8.10",
+		"@vitest/coverage-v8": "^0.34.6",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.2.2",
+		"vitest": "^0.34.6"
+	}
+}
