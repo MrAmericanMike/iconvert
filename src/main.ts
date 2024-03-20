@@ -15,8 +15,32 @@ const IConvert = (value: number) => {
 		kelvin() {
 			return kelvinConverts;
 		},
+		millimeters() {
+			return millimetersConverts;
+		},
+		centimeters() {
+			return centimetersConverts;
+		},
+		decimeters() {
+			return decimetersConverts;
+		},
 		meters() {
 			return metersConverts;
+		},
+		kilometers() {
+			return kilometersConverts;
+		},
+		inches() {
+			return inchesConverts;
+		},
+		feet() {
+			return feetConverts;
+		},
+		yards() {
+			return yardsConverts;
+		},
+		miles() {
+			return milesConverts;
 		}
 	};
 	return API;
@@ -55,6 +79,87 @@ const kelvinConverts = {
 	}
 };
 
+const millimetersConverts = {
+	toCentimeters() {
+		return val / 10;
+	},
+	toDecimeters() {
+		return val / 100;
+	},
+	toMeters() {
+		return val / 1000;
+	},
+	toKilometers() {
+		return val / 1000000;
+	},
+	toInches() {
+		return val / 25.4;
+	},
+	toFeet() {
+		return val / 304.8;
+	},
+	toYards() {
+		return val / 914.4;
+	},
+	toMiles() {
+		return val / 1609344;
+	}
+};
+
+const centimetersConverts = {
+	toMillimeters() {
+		return val * 10;
+	},
+	toDecimeters() {
+		return val / 10;
+	},
+	toMeters() {
+		return val / 100;
+	},
+	toKilometers() {
+		return val / 100000;
+	},
+	toInches() {
+		return val / 2.54;
+	},
+	toFeet() {
+		return val / 30.48;
+	},
+	toYards() {
+		return val / 91.44;
+	},
+	toMiles() {
+		return val / 160934;
+	}
+};
+
+const decimetersConverts = {
+	toMillimeters() {
+		return val * 10;
+	},
+	toCentimeters() {
+		return val * 10;
+	},
+	toMeters() {
+		return val / 100;
+	},
+	toKilometers() {
+		return val / 100000;
+	},
+	toInches() {
+		return val / 2.54;
+	},
+	toFeet() {
+		return val / 30.48;
+	},
+	toYards() {
+		return val / 91.44;
+	},
+	toMiles() {
+		return val / 16093.44;
+	}
+};
+
 const metersConverts = {
 	toMillimeters() {
 		return val * 1000;
@@ -68,17 +173,152 @@ const metersConverts = {
 	toKilometers() {
 		return val / 1000;
 	},
-	toFeet() {
-		return val / 0.3048;
-	},
 	toInches() {
 		return val / 0.0254;
+	},
+	toFeet() {
+		return val / 0.3048;
 	},
 	toYards() {
 		return val / 0.9144;
 	},
 	toMiles() {
 		return val / 1609.344;
+	}
+};
+
+const kilometersConverts = {
+	toMillimeters() {
+		return val * 1000000;
+	},
+	toCentimeters() {
+		return val * 100000;
+	},
+	toDecimeters() {
+		return val * 10000;
+	},
+	toMeters() {
+		return val * 1000;
+	},
+	toInches() {
+		return val / 0.0000254;
+	},
+	toFeet() {
+		return val / 0.0003048;
+	},
+	toYards() {
+		return val / 0.0009144;
+	},
+	toMiles() {
+		return val / 1.609344;
+	}
+};
+
+const inchesConverts = {
+	toMillimeters() {
+		return val * 25.4;
+	},
+	toCentimeters() {
+		return val * 2.54;
+	},
+	toDecimeters() {
+		return val * 0.254;
+	},
+	toMeters() {
+		return val / 39.3701;
+	},
+	toKilometers() {
+		return val / 39370.1;
+	},
+	toFeet() {
+		return val / 12;
+	},
+	toYards() {
+		return val / 36;
+	},
+	toMiles() {
+		return val / 63360;
+	}
+};
+
+const feetConverts = {
+	toMillimeters() {
+		return val * 304.8;
+	},
+	toCentimeters() {
+		return val * 30.48;
+	},
+	toDecimeters() {
+		return val * 3.048;
+	},
+	toMeters() {
+		return val * 0.3048;
+	},
+	toKilometers() {
+		return val / 3280.84;
+	},
+	toInches() {
+		return val * 12;
+	},
+	toYards() {
+		return val / 3;
+	},
+	toMiles() {
+		return val / 5280;
+	}
+};
+
+const yardsConverts = {
+	toMillimeters() {
+		return val * 914.4;
+	},
+	toCentimeters() {
+		return val * 91.44;
+	},
+	toDecimeters() {
+		return val * 9.144;
+	},
+	toMeters() {
+		return val * 0.9144;
+	},
+	toKilometers() {
+		return val / 1093.61;
+	},
+	toInches() {
+		return val * 36;
+	},
+	toFeet() {
+		return val * 3;
+	},
+	toMiles() {
+		return val / 1760;
+	}
+};
+
+const milesConverts = {
+	toMillimeters() {
+		return val * 1609344;
+	},
+	toCentimeters() {
+		return val * 160934;
+	},
+	toDecimeters() {
+		return val * 16093.44;
+	},
+	toMeters() {
+		return val * 1609.344;
+	},
+	toKilometers() {
+		return val * 1.609344;
+	},
+	toInches() {
+		return val * 63360;
+	},
+	toFeet() {
+		return val * 5280;
+	},
+	toYards() {
+		return val * 1760;
 	}
 };
 
