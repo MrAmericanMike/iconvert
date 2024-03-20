@@ -135,25 +135,25 @@ const centimetersConverts = {
 
 const decimetersConverts = {
 	toMillimeters() {
-		return val * 10;
+		return val * 100;
 	},
 	toCentimeters() {
 		return val * 10;
 	},
 	toMeters() {
-		return val / 100;
+		return val / 10;
 	},
 	toKilometers() {
 		return val / 100000;
 	},
 	toInches() {
-		return val / 2.54;
+		return val / 0.254;
 	},
 	toFeet() {
-		return val / 30.48;
+		return val / 3.048;
 	},
 	toYards() {
-		return val / 91.44;
+		return val / 9.144;
 	},
 	toMiles() {
 		return val / 16093.44;

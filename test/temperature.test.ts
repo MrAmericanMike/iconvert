@@ -1,6 +1,5 @@
-// sum.test.js
 import { expect, test } from "vitest";
-import IConvert from "./main";
+import IConvert from "../src/main";
 
 // CENTIGRADE / CELSIUS to FAHRENHEIT
 test("Centigrade/Celsius to Fahrenheit", () => {
@@ -32,14 +31,16 @@ test("Fahrenheit to Centigrade/Celsius", () => {
 	expect(IConvert(-40).fahrenheit().toKelvin()).toBeCloseTo(233.15);
 });
 
-// METERS
-test("Meters", () => {
-	expect(IConvert(1).meters().toMillimeters()).toBeCloseTo(1000);
-	expect(IConvert(1).meters().toCentimeters()).toBeCloseTo(100);
-	expect(IConvert(1).meters().toDecimeters()).toBeCloseTo(10);
-	expect(IConvert(1).meters().toKilometers()).toBeCloseTo(0.001);
-	expect(IConvert(1).meters().toFeet()).toBeCloseTo(3.28084);
-	expect(IConvert(1).meters().toInches()).toBeCloseTo(39.3701);
-	expect(IConvert(1).meters().toYards()).toBeCloseTo(1.09361);
-	expect(IConvert(1).meters().toMiles()).toBeCloseTo(0.000621371);
+// KELVIN to FAHRENHEIT
+test("Kelvin to Fahrenheit", () => {
+	expect(IConvert(10).kelvin().toFahrenheit()).toBeCloseTo(-441.67);
+	expect(IConvert(-40).kelvin().toFahrenheit()).toBeCloseTo(-531.67);
+});
+
+// KELVIN to CENTIGRADE / CELSIUS
+test("Kelvin to Centigrade/Celsius", () => {
+	expect(IConvert(10).kelvin().toCentigrade()).toBeCloseTo(-263.15);
+	expect(IConvert(10).kelvin().toCelsius()).toBeCloseTo(-263.15);
+	expect(IConvert(-40).kelvin().toCentigrade()).toBeCloseTo(-313.15);
+	expect(IConvert(-40).kelvin().toCelsius()).toBeCloseTo(-313.15);
 });
