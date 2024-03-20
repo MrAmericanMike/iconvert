@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import IConvert from "../src/main";
+import IConvert from "../main";
 
 // MILLIMETERS
 test("Millimeters", () => {
