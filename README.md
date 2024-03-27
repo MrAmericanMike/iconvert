@@ -8,8 +8,7 @@ Celsius, Centigrade, Fahrenheit, Kelvin
 
 ## Distance
 
-Millimeters, Centimeters, Decimeters, Meters, Kilometers
-Inches, Feet, Yards, Miles
+Millimeters, Centimeters, Decimeters, Meters, Kilometers, Inches, Feet, Yards, Miles
 
 ## Weight
 
