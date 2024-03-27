@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import IConvert from "../main";
+import IConvert from "../src/main";
 
 // CENTIGRADE / CELSIUS to FAHRENHEIT
 test("Centigrade/Celsius to Fahrenheit", () => {

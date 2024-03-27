@@ -3,6 +3,7 @@ let val: number;
 const IConvert = (value: number) => {
 	val = value;
 	const API = {
+		// TEMPERATURE
 		centigrade() {
 			return centigradeConverts;
 		},
@@ -15,6 +16,7 @@ const IConvert = (value: number) => {
 		kelvin() {
 			return kelvinConverts;
 		},
+		// DISTANCE
 		millimeters() {
 			return millimetersConverts;
 		},
@@ -41,6 +43,19 @@ const IConvert = (value: number) => {
 		},
 		miles() {
 			return milesConverts;
+		},
+		// WEIGHT
+		grams() {
+			return gramsConverts;
+		},
+		kilograms() {
+			return kilogramsConverts;
+		},
+		pounds() {
+			return poundsConverts;
+		},
+		ounces() {
+			return ouncesConverts;
 		}
 	};
 	return API;
@@ -319,6 +334,54 @@ const milesConverts = {
 	},
 	toYards() {
 		return val * 1760;
+	}
+};
+
+const gramsConverts = {
+	toKilograms() {
+		return val / 1000;
+	},
+	toOunces() {
+		return val / 28.3495;
+	},
+	toPounds() {
+		return val / 453.592;
+	}
+};
+
+const kilogramsConverts = {
+	toGrams() {
+		return val * 1000;
+	},
+	toOunces() {
+		return val * 35.274;
+	},
+	toPounds() {
+		return val * 2.20462;
+	}
+};
+
+const ouncesConverts = {
+	toGrams() {
+		return val * 28.3495;
+	},
+	toKilograms() {
+		return val / 35.274;
+	},
+	toPounds() {
+		return val / 16;
+	}
+};
+
+const poundsConverts = {
+	toGrams() {
+		return val * 453.592;
+	},
+	toKilograms() {
+		return val / 2.20462;
+	},
+	toOunces() {
+		return val * 16;
 	}
 };
 

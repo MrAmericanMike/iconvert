@@ -4,12 +4,16 @@ Units conversion library.
 
 ## Temperature
 
-Celsius, Centigrade,Fahrenheit, Kelvin
+Celsius, Centigrade, Fahrenheit, Kelvin
 
 ## Distance
 
 Millimeters, Centimeters, Decimeters, Meters, Kilometers
 Inches, Feet, Yards, Miles
+
+## Weight
+
+Grams, Kilograms, Pounds, Ounces
 
 ## Usage
 
@@ -25,11 +29,19 @@ console.log(IConvert(12).inches().toFeet()); // 1
 console.log(IConvert(1).meters().toYards()); // 1.09361
 
 console.log(IConvert(10).centigrade().toFahrenheit()); // 50
+
+console.log(IConvert(1).kilograms().toPounds()); // 2.20462
 ```
 
 ## WIP
 
 Planned to add more units.
+
+---
+
+## Issues, Ideas, Suggestions, Questions
+
+Open an [issue](https://github.com/MrAmericanMike/iconvert/issues) we will take a look at it.
 
 ---
 

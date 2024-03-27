@@ -7,9 +7,16 @@
 	"types": "lib/main.d.ts",
 	"scripts": {
 		"tsc": "tsc",
+		"build": "tsc",
 		"test": "vitest",
-		"coverage": "vitest run --coverage"
+		"coverage": "vitest run --coverage",
+		"prepublishOnly": "pnpm run build"
 	},
+	"files": [
+		"lib/**/*",
+		"package.json",
+		"README.md"
+	],
 	"keywords": [
 		"iconvert",
 		"conversion",
@@ -17,7 +24,8 @@
 		"convert",
 		"math",
 		"temperature",
-		"distance"
+		"distance",
+		"weight"
 	],
 	"license": "MIT",
 	"homepage": "https://github.com/MrAmericanMike/iconvert#readme",
