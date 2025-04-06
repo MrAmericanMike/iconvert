@@ -56,6 +56,16 @@ const IConvert = (value: number) => {
 		},
 		ounces() {
 			return ouncesConverts;
+		},
+		// VOLUME
+		liters() {
+			return litersConverts;
+		},
+		gallons() {
+			return gallonsConverts;
+		},
+		imperialGallons() {
+			return imperialGallonsConverts;
 		}
 	};
 	return API;
@@ -381,6 +391,114 @@ const poundsConverts = {
 		return val / 2.20462;
 	},
 	toOunces() {
+		return val * 16;
+	}
+};
+
+const litersConverts = {
+	toMilliliters() {
+		return val * 1000;
+	},
+	toCentiliters() {
+		return val * 100;
+	},
+	toDeciliters() {
+		return val * 10;
+	},
+	toGallons() {
+		return val / 3.78541;
+	},
+	toQuarts() {
+		return val * 1.05669;
+	},
+	toPints() {
+		return val * 2.11338;
+	},
+	toCups() {
+		return val * 4.16667;
+	},
+	toImperialGallons() {
+		return val / 4.546092;
+	},
+	toImperialQuarts() {
+		return val / 1.136;
+	},
+	toImperialPints() {
+		return val * 1.75975;
+	},
+	toImperialCups() {
+		return val * 3.51951;
+	}
+};
+
+const gallonsConverts = {
+	toLiters() {
+		return val * 3.78541;
+	},
+	toMilliliters() {
+		return val * 3785.41;
+	},
+	toCentiliters() {
+		return val * 378.541;
+	},
+	toDeciliters() {
+		return val * 37.8541;
+	},
+	toQuarts() {
+		return val * 4;
+	},
+	toPints() {
+		return val * 8;
+	},
+	toCups() {
+		return val * 15.7725;
+	},
+	toImperialGallons() {
+		return val / 1.20095;
+	},
+	toImperialQuarts() {
+		return val * 3.3307;
+	},
+	toImperialPints() {
+		return val * 6.66139;
+	},
+	toImperialCups() {
+		return val * 13.3228;
+	}
+};
+
+const imperialGallonsConverts = {
+	toLiters() {
+		return val * 4.546092;
+	},
+	toDeciliters() {
+		return val * 45.4609;
+	},
+	toCentiliters() {
+		return val * 454.609;
+	},
+	toMilliliters() {
+		return val * 4546.092;
+	},
+	toGallons() {
+		return val * 1.20095;
+	},
+	toQuarts() {
+		return val * 4.8038;
+	},
+	toPints() {
+		return val * 9.6076;
+	},
+	toCups() {
+		return val * 18.942;
+	},
+	toImperialQuarts() {
+		return val * 4;
+	},
+	toImperialPints() {
+		return val * 8;
+	},
+	toImperialCups() {
 		return val * 16;
 	}
 };
