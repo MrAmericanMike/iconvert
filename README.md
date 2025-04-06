@@ -14,6 +14,10 @@ Millimeters, Centimeters, Decimeters, Meters, Kilometers, Inches, Feet, Yards, M
 
 Grams, Kilograms, Pounds, Ounces
 
+## Volume
+
+Liters, Gallons, Imperial Gallons
+
 ## Usage
 
 ```js
